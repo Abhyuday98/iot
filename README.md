@@ -55,3 +55,6 @@ Next, you’ll need to run the three jupyter notebooks under the server folder.
 2. Follow the following steps to pair the pysical notification microbit with the raspberry pi: https://ukbaz.github.io/howto/ubit_workshop.html
 3. Run "runCommsFinal.py" from the raspberrypi folder on the raspberrypi
 
+---
+
+### The combined Cleaned collected Data can be found in the "collectedDataset.csv" file and can be visualized through the following link https://public.tableau.com/profile/abhyuday.samadder#!/vizhome/IOTG5/Sheet1?publish=yes
