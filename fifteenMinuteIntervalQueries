@@ -1,0 +1,43 @@
+
+SELECT CONCAT('Day: ', Day(`DateTime`),' interval: ', concat_ws('-',
+           date_format(`DateTime` - interval minute(`DateTime`)%15 minute, '%H:%i'),
+           date_format(`DateTime` + interval 15-minute(`DateTime`)%15 minute, '%H:%i')
+       )) as period,
+       max(`DateTime`) as TimeStamp,
+       round(max(46-`Distance(cm)`)/46*100) as trashLevel
+FROM litterbin1 where `Distance(cm)`<46
+GROUP BY period
+ORDER BY period ASC;
+
+
+SELECT CONCAT('Day: ', Day(`DateTime`),' interval: ', concat_ws('-',
+           date_format(`DateTime` - interval minute(`DateTime`)%15 minute, '%H:%i'),
+           date_format(`DateTime` + interval 15-minute(`DateTime`)%15 minute, '%H:%i')
+       )) as period,
+       min(`DateTime`) as TimeStamp,
+       round(max(30-`Distance(cm)`)/30*100) as trashLevel
+FROM litterbin2 where `Distance(cm)`<54
+GROUP BY period
+ORDER BY period ASC;
+
+SELECT CONCAT('Day: ', Day(`DateTime`),' interval: ', concat_ws('-',
+           date_format(`DateTime` - interval minute(`DateTime`)%15 minute, '%H:%i'),
+           date_format(`DateTime` + interval 15-minute(`DateTime`)%15 minute, '%H:%i')
+       )) as period,
+       min(`DateTime`) as TimeStamp,	  100-if(round(max(`Distance(cm)`)/12*100)>100, 100, round(max(`Distance(cm)`)/12*100)) as trashLevelCorrected
+
+FROM toiletpaper1 where `Distance(cm)`<15
+GROUP BY period
+ORDER BY period ASC;
+
+SELECT CONCAT('Day: ', Day(`DateTime`),' interval: ', concat_ws('-',
+           date_format(`DateTime` - interval minute(`DateTime`)%15 minute, '%H:%i'),
+           date_format(`DateTime` + interval 15-minute(`DateTime`)%15 minute, '%H:%i')
+       )) as period,
+       min(`DateTime`) as TimeStamp,       100-if(round(max(`Distance(cm)`)/12*100)>100, 100, round(max(`Distance(cm)`)/12*100)) as trashLevelCorrected
+       
+FROM toiletpaper2 where `Distance(cm)`<15
+GROUP BY period
+ORDER BY period ASC;
+
+
