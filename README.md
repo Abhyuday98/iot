@@ -2,12 +2,12 @@
 1. You'll need to have setup a KAAIOT dashboard. Go through the following documentation to learn how to setup the KAAIOT dashbaord: https://docs.kaaiot.io/KAA/docs/v1.2.0/Welcome/
 2. You'll need to replace you're the following two variables with your KAAIOT tokens and endpoits in the sendDataToKaaIOT.ipynb
 ```
-ENDPOINT_TOKEN = "DfxM96LkQT" # Paste endpoint token
-APPLICATION_VERSION = "bu29218547tsntf2sup0-v1"  # Paste application version
+ENDPOINT_TOKEN = "<your enpoint token>" # Paste endpoint token
+APPLICATION_VERSION = "<your application version>"  # Paste application version
 ```
 3. set up a telegram bot and connect it to a channel. You can refer to to following link https://core.telegram.org/bots. Replace the telegram url in the "telegramChannelUpdates.pynb" file
 ```
-telegramURL = "https://api.telegram.org/bot733055974:AAEsyKoq3z5mquv0k_xmzugu_dej_1MbdtA/sendMessage?chat_id=-1001267215209&parse_mode=Markdown&text=" # replace with your url
+telegramURL = "https://api.telegram.org/<botID>/sendMessage?chat_id=<chatId>parse_mode=Markdown&text=" # replace with your url
 ``` 
 
 
