@@ -1,4 +1,11 @@
-## Prerequisites 
+## A sparkling clean Toilet by team Stains
+medium article link: https://nuraisyah2018.medium.com/a-sparkling-clean-toilet-with-iot-9acaa5d5da76
+
+
+---
+
+
+### Prerequisites 
 1. You'll need to have setup a KAAIOT dashboard. Go through the following documentation to learn how to setup the KAAIOT dashbaord: https://docs.kaaiot.io/KAA/docs/v1.2.0/Welcome/
 2. You'll need to replace you're the following two variables with your KAAIOT tokens and endpoits in the sendDataToKaaIOT.ipynb
 ```
@@ -11,7 +18,7 @@ telegramURL = "https://api.telegram.org/<botID>/sendMessage?chat_id=<chatId>pars
 ``` 
 
 
-## Set up database
+### Set up database
 
 1. You’ll need to set up a MySQL version 8 database. 
 2. After you set it up you'll need to run to sql file inside the DatabaseSettings Folder.
@@ -26,7 +33,7 @@ database_settings = { "username": <change username>,
 ```
 ---
 
-## Set up requirenments on python backend server
+### Set up requirenments on python backend server
 
 Install the following libraries:
 run: 
@@ -34,7 +41,7 @@ run:
 pip install pymysql sqlalchemy paho_mqtt 
 ```
 
-## Run the server Jupyter notebooks
+### Run the server Jupyter notebooks
 
 Next, you’ll need to run the three jupyter notebooks under the server folder.
 
@@ -44,12 +51,12 @@ Next, you’ll need to run the three jupyter notebooks under the server folder.
 
 ---
 
-## The Microbit folder contains the code for the different microbits. 
+### The Microbit folder contains the code for the different microbits. 
 
 ---
 
 
-## On the raspberry pi
+### On the raspberry pi
 
 1. follow the steps to install the pyBeacon package: https://github.com/forksociety/PyBeacon
 2. Follow the following steps to pair the pysical notification microbit with the raspberry pi: https://ukbaz.github.io/howto/ubit_workshop.html
@@ -57,4 +64,4 @@ Next, you’ll need to run the three jupyter notebooks under the server folder.
 
 ---
 
-### The combined Cleaned collected Data can be found in the "collectedDataset.csv" file and can be visualized through the following link https://public.tableau.com/profile/abhyuday.samadder#!/vizhome/IOTG5/Sheet1?publish=yes
+#### The combined Cleaned collected Data can be found in the "collectedDataset.csv" file and can be visualized through the following link https://public.tableau.com/profile/abhyuday.samadder#!/vizhome/IOTG5/Sheet1?publish=yes
